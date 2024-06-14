@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container d-flex flex-column align-items-center justify-content-center pt-5">
-        <h1>Lista Fumetti</h1>
+        <h1 class="mb-5">Comics</h1>
         <div class="row g-5">
             @foreach ($comicsList as $curComic)
                 <div class="col">
