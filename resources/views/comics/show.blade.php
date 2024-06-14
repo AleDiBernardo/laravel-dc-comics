@@ -2,5 +2,9 @@
 
 
 @section('content')
-    <h1>Show</h1>
+<div class="container">
+
+    <h1>Descrizione:</h1>
+    <p>{{ $comic->description }}</p>
+</div>
 @endsection
