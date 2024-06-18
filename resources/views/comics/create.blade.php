@@ -33,8 +33,10 @@
             <label for="type">Type:</label>
             <input type="text" class="form-control" id="type" name="type" value="{{ old('type') }}" required>
         </div>
-        <div class="form-group">
+        <div class="form-group pt-3">
             <button type="submit" class="btn btn-primary">Create Comic</button>
+            <a class="btn btn-primary" href="{{ route('comics.index') }}">Back</a>
+            
         </div>
     </form>
 </div>
