@@ -45,11 +45,16 @@
                             <label for="type">Type:</label>
                             <input type="text" class="form-control" id="type" name="type" value="{{ old('type', $comic->type) }}" required>
                         </div>
-                        <div class="form-group text-right">
+                        <div class="form-group text-right pt-1">
                             <button type="submit" class="btn btn-success">Save Changes</button>
-                            <a href="{{ route('comics.index') }}" class="btn btn-secondary">Cancel</a>
+                            <form action="{{ route('comics.show', ['comic' => $comic->id]) }}" method="GET">
+                                @csrf
+                                {{-- @method('GET') --}}
+                                <button type="submit" class="btn btn-secondary">Cancel</button>
+                            </form>
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>

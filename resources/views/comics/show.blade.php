@@ -26,8 +26,16 @@
                     </div>
                 </div>
                 <div class="card-footer text-right d-flex justify-content-between">
-                    <a href="{{ route('comics.edit',['comic'=>$comic->id])  }}" class="btn btn-primary">Edit</a>
                     <a href="{{ route('comics.index') }}" class="btn btn-primary">Back</a>
+                        <div class="d-flex gap-1">
+    
+                            <a href="{{ route('comics.edit',['comic'=>$comic->id])  }}" class="btn btn-success">Edit</a>
+                            <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this comic?')">Delete</button>
+                            </form>
+                        </div>
 
                 </div>
             </div>
