@@ -12,7 +12,8 @@
         </div>
 
         <div>
-            <button class="btn btn-primary">Something</button>
+            <a href="{{ route('comics.create') }}" class="btn btn-primary">Create Another Comic</a>
+
         </div>
     </div>
 </header>
